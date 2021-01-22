@@ -29,7 +29,7 @@ if __name__ == "__main__":
     path_download = config['CONFIG']['PATHS']['DOWNLOAD']
     ext_office = config['CONFIG']['EXTENSIONS']['OFFICE']
     ext_img =  config['CONFIG']['EXTENSIONS']['IMAGE']
-    ext_video = config['CONFIG']['EXTENSIONS']['IMAGE']
+    ext_video = config['CONFIG']['EXTENSIONS']['VIDEO']
 
     folders_destination = config['CONFIG']['PATHS']['DESTINATION']
   
