@@ -1,0 +1,13 @@
+{
+    "CONFIG": {
+        "PATHS": {
+            "DOWNLOAD": "C:\\Users\\u190804\\Downloads\\",
+            "DESTINATION": ["Videos", "Office", "Images", "Otros"]
+        },
+        "EXTENSIONS": {
+            "OFFICE": [".docx", ".txt", ".doc", ".pdf", ".pptx", ".xls", ".xlsx"],
+            "IMAGE": [".png", ".jpg", ".jpeg", ".gif"],
+            "VIDEO": [".mp4", ".mov", ".avi"]
+        }
+    }
+}
