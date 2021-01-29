@@ -1,13 +1,13 @@
 {
     "CONFIG": {
         "PATHS": {
-            "DOWNLOAD": "C:\\Users\\u190804\\Downloads\\",
-            "DESTINATION": ["Videos", "Office", "Images", "Otros"]
+            "Download": "C:\\Users\\u190804\\Downloads\\"
         },
-        "EXTENSIONS": {
-            "OFFICE": [".docx", ".txt", ".doc", ".pdf", ".pptx", ".xls", ".xlsx"],
-            "IMAGE": [".png", ".jpg", ".jpeg", ".gif"],
-            "VIDEO": [".mp4", ".mov", ".avi"]
+        "FOLDERS": {
+            "Office":  [".docx", ".txt", ".doc", ".pdf", ".pptx", ".xls", ".xlsx"],
+            "Images": [".png", ".jpg", ".jpeg", ".gif"],
+            "Videos": [".mp4", ".mov", ".avi"],
+            "Music": [".mp3"]
         }
     }
 }

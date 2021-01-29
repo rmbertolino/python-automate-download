@@ -1,13 +1,12 @@
 import os
 import shutil
-
+import json
 class Download():
-    def __init__(self, **kwargs):
-        self.path_download = kwargs.get('path_download', '')
-        self.ext_office = kwargs.get('ext_office', [])
-        self.ext_img = kwargs.get('ext_img', [])
-        self.ext_video = kwargs.get('ext_video', [])
-        self.folders_destination = kwargs.get('folders_destination', [])
+    def __init__(self, fileConfig):
+        config = self.__getConfig('config.json')
+
+        self.path_download = config['CONFIG']['PATHS']['Download']
+        self.folders_destination = config['CONFIG']['FOLDERS']
 
     def __str__(self):
         return self.path_download
@@ -37,20 +36,15 @@ class Download():
         print(f'File: {file} movido a {destination}')
 
     def __sortFile(self, file, ext):
-        for extension in self.ext_video:
-            if extension == ext:
-                self.__moveFile(file+ext, 'Videos')
-                return True
+        for folder in self.folders_destination:
+            for extension in self.folders_destination[folder]:
+                if extension == ext:
+                    self.__moveFile(file+ext, folder)
+                    return True
+        return False
 
-        for extension in self.ext_img:
-            if extension == ext:
-                self.__moveFile(file+ext, 'Images')
-                return True
-        
-        for extension in self.ext_office:
-            if extension == ext:
-                self.__moveFile(file+ext, 'Office')
-                return True
-        
-        self.__moveFile(file+ext, 'Otros')
-        return True
+    def __getConfig(self, fileConfig):
+        with open(fileConfig, 'r') as f:
+            config = json.load(f)
+
+        return config
